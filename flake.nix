@@ -15,6 +15,8 @@
           pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
             (python-final: python-prev: rec {
               pillow = python-final.callPackage ./pkgs/pillow { };
+              cn2an = python-final.callPackage ./pkgs/cn2an { };
+              proces = python-final.callPackage ./pkgs/proces { };
               arcade =
                 python-final.callPackage ./pkgs/arcade { inherit pillow; };
               pytiled-parser =
@@ -40,6 +42,8 @@
 
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
+          cn2an = pkgs.python3Packages.cn2an;
+          proces = pkgs.python3Packages.proces;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
