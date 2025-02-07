@@ -17,7 +17,11 @@
               # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
               proces = python-final.callPackage ./pkgs/proces { };
+              standard-chunk =
+                python-final.callPackage ./pkgs/standard-chunk { };
+              standard-aifc = python-final.callPackage ./pkgs/standard-aifc { };
               arcade = python-final.callPackage ./pkgs/arcade { };
+              pocketsphinx = python-final.callPackage ./pkgs/pocketsphinx { };
               groq = python-final.callPackage ./pkgs/groq { };
               audioop-lts = python-final.callPackage ./pkgs/audioop-lts { };
               speech-recognition =
@@ -47,8 +51,11 @@
           arcade = pkgs.python3Packages.arcade;
           cn2an = pkgs.python3Packages.cn2an;
           groq = pkgs.python3Packages.groq;
+          standard-aifc = pkgs.python3Packages.standard-aifc;
+          standard-chunk = pkgs.python3Packages.standard-chunk;
+          pocketsphinx = pkgs.python3Packages.pocketsphinx;
           audioop-lts = pkgs.python3Packages.audioop-lts;
-          speech_recognition = pkgs.python3Packages.speech-recognition;
+          speech-recognition = pkgs.python3Packages.speech-recognition;
           proces = pkgs.python3Packages.proces;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
