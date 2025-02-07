@@ -23,6 +23,7 @@
                 python-final.callPackage ./pkgs/sphinx-sitemap { };
               sphinx-rtd-dark-mode =
                 python-final.callPackage ./pkgs/sphinx-rtd-dark-mode { };
+              r-pi-gpio = python-final.callPackage ./pkgs/rpi { };
             })
           ];
         };
@@ -39,7 +40,8 @@
 
         packages = {
           inherit (pkgs.python3Packages)
-            arcade pytiled-parser sphinx-sitemap sphinx-rtd-dark-mode pillow;
+            arcade pytiled-parser sphinx-sitemap sphinx-rtd-dark-mode pillow
+            r-pi-gpio;
         };
       });
 }
