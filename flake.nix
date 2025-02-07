@@ -23,7 +23,7 @@
                 python-final.callPackage ./pkgs/sphinx-sitemap { };
               sphinx-rtd-dark-mode =
                 python-final.callPackage ./pkgs/sphinx-rtd-dark-mode { };
-              r-pi-gpio = python-final.callPackage ./pkgs/rpi { };
+              RPi.GPIO = python-final.callPackage ./pkgs/rpi { };
             })
           ];
         };
@@ -38,10 +38,13 @@
       in {
         devShells.default = pkgs.callPackage ./pkgs/dev-shell { };
 
-        packages = {
-          inherit (pkgs.python3Packages)
-            arcade pytiled-parser sphinx-sitemap sphinx-rtd-dark-mode pillow
-            r-pi-gpio;
+        packages = pkgs.python3Packages // {
+          arcade = pkgs.python3Packages.arcade;
+          pytiled-parser = pkgs.python3Packages.pytiled-parser;
+          sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
+          sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
+          pillow = pkgs.python3Packages.pillow;
+          RPi.GPIO = pkgs.python3Packages.RPi.GPIO;
         };
       });
 }
