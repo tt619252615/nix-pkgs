@@ -18,6 +18,10 @@
               cn2an = python-final.callPackage ./pkgs/cn2an { };
               proces = python-final.callPackage ./pkgs/proces { };
               arcade = python-final.callPackage ./pkgs/arcade { };
+              groq = python-final.callPackage ./pkgs/groq { };
+              audioop-lts = python-final.callPackage ./pkgs/audioop-lts { };
+              speech-recognition =
+                python-final.callPackage ./pkgs/speech-recognition { };
               pytiled-parser =
                 python-final.callPackage ./pkgs/pytiled-parser { };
               sphinx-sitemap =
@@ -42,6 +46,9 @@
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
           cn2an = pkgs.python3Packages.cn2an;
+          groq = pkgs.python3Packages.groq;
+          audioop-lts = pkgs.python3Packages.audioop-lts;
+          speech-recognition = pkgs.python3Packages.speech-recognition;
           proces = pkgs.python3Packages.proces;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
