@@ -16,6 +16,7 @@
             (python-final: python-prev: rec {
               # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
+              pyglet = python-final.callPackage ./pkgs/pyglet { };
               proces = python-final.callPackage ./pkgs/proces { };
               standard-chunk =
                 python-final.callPackage ./pkgs/standard-chunk { };
@@ -50,6 +51,7 @@
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
           cn2an = pkgs.python3Packages.cn2an;
+          pyglet = pkgs.python3Packages.pyglet;
           groq = pkgs.python3Packages.groq;
           standard-aifc = pkgs.python3Packages.standard-aifc;
           standard-chunk = pkgs.python3Packages.standard-chunk;
