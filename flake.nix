@@ -48,7 +48,7 @@
           cn2an = pkgs.python3Packages.cn2an;
           groq = pkgs.python3Packages.groq;
           audioop-lts = pkgs.python3Packages.audioop-lts;
-          speech-recognition = pkgs.python3Packages.speech-recognition;
+          speech_recognition = pkgs.python3Packages.speech-recognition;
           proces = pkgs.python3Packages.proces;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
