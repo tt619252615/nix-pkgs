@@ -14,11 +14,10 @@
         default = final: prev: {
           pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
             (python-final: python-prev: rec {
-              pillow = python-final.callPackage ./pkgs/pillow { };
+              # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
               proces = python-final.callPackage ./pkgs/proces { };
-              arcade =
-                python-final.callPackage ./pkgs/arcade { inherit pillow; };
+              arcade = python-final.callPackage ./pkgs/arcade { };
               pytiled-parser =
                 python-final.callPackage ./pkgs/pytiled-parser { };
               sphinx-sitemap =
@@ -47,7 +46,7 @@
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
-          pillow = pkgs.python3Packages.pillow;
+          # pillow = pkgs.python3Packages.pillow;
           RPi.GPIO = pkgs.python3Packages.RPi.GPIO;
         };
       });
