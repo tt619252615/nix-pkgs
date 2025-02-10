@@ -16,6 +16,15 @@
             (python-final: python-prev: rec {
               # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
+              lameenc = python-final.callPackage ./pkgs/lameenc { };
+              cylimiter = python-final.callPackage ./pkgs/cylimiter { };
+              audiomentations =
+                python-final.callPackage ./pkgs/audiomentations { };
+              deep-phonemizer =
+                python-final.callPackage ./pkgs/deep-phonemizer { };
+              vosk = python-final.callPackage ./pkgs/vosk { };
+              mycroft-precise =
+                python-final.callPackage ./pkgs/mycroft-precise { };
               pyglet = python-final.callPackage ./pkgs/pyglet { };
               proces = python-final.callPackage ./pkgs/proces { };
               standard-chunk =
@@ -50,7 +59,12 @@
 
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
+          audiomentations = pkgs.python3Packages.audiomentations;
+          cylimiter = pkgs.python3Packages.cylimiter;
+          lameenc = pkgs.python3Packages.lameenc;
+          vosk = pkgs.python3Packages.vosk;
           cn2an = pkgs.python3Packages.cn2an;
+          mycroft_precise = pkgs.python3Packages.mycroft_precise;
           pyglet = pkgs.python3Packages.pyglet;
           groq = pkgs.python3Packages.groq;
           standard-aifc = pkgs.python3Packages.standard-aifc;
