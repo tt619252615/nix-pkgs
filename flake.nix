@@ -16,6 +16,11 @@
             (python-final: python-prev: rec {
               # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
+              tensorflow-addons =
+                python-final.callPackage ./pkgs/tensorflow-addons { };
+              onnx-tf = python-final.callPackage ./pkgs/onnx-tf { };
+              openai-whisper =
+                python-final.callPackage ./pkgs/openai-whisper { };
               lameenc = python-final.callPackage ./pkgs/lameenc { };
               cylimiter = python-final.callPackage ./pkgs/cylimiter { };
               audiomentations =
@@ -32,6 +37,7 @@
               standard-aifc = python-final.callPackage ./pkgs/standard-aifc { };
               arcade = python-final.callPackage ./pkgs/arcade { };
               pocketsphinx = python-final.callPackage ./pkgs/pocketsphinx { };
+              pvporcupine = python-final.callPackage ./pkgs/pvporcupine { };
               groq = python-final.callPackage ./pkgs/groq { };
               audioop-lts = python-final.callPackage ./pkgs/audioop-lts { };
               speech-recognition =
@@ -60,6 +66,8 @@
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
           audiomentations = pkgs.python3Packages.audiomentations;
+          openai-whisper = pkgs.python3Packages.openai-whisper;
+          onnx-tf = pkgs.python3Packages.onnx-tf;
           cylimiter = pkgs.python3Packages.cylimiter;
           lameenc = pkgs.python3Packages.lameenc;
           vosk = pkgs.python3Packages.vosk;
@@ -73,6 +81,7 @@
           audioop-lts = pkgs.python3Packages.audioop-lts;
           speech-recognition = pkgs.python3Packages.speech-recognition;
           proces = pkgs.python3Packages.proces;
+          pvporcupine = pkgs.python3Packages.pvporcupine;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;

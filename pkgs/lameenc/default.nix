@@ -1,5 +1,5 @@
 { lib, buildPythonPackage, fetchFromGitHub, setuptools, setuptools-scm, wheel
-, autoPatchelfHook, lame }:
+, autoPatchelfHook, cmake }:
 
 buildPythonPackage rec {
   pname = "lameenc";
@@ -13,9 +13,8 @@ buildPythonPackage rec {
     hash = "sha256-/GV18mPcru1raFfFQGSAHgNwpmwN4oVFKcBL4JjZkC8=";
   };
 
-  buildInputs = [ setuptools setuptools-scm wheel lame ];
-  nativeBuildInputs = [ autoPatchelfHook ];
-
+  buildInputs = [ setuptools setuptools-scm wheel ];
+  nativeBuildInputs = [ autoPatchelfHook cmake ];
   meta = {
     description = "Python bindings around the LAME encoder";
     homepage = "https://github.com/chrisstaite/lameenc";
