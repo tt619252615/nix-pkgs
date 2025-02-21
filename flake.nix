@@ -16,6 +16,8 @@
             (python-final: python-prev: rec {
               # pillow = python-final.callPackage ./pkgs/pillow { };
               cn2an = python-final.callPackage ./pkgs/cn2an { };
+              funasr-onnx = python-final.callPackage ./pkgs/funasr-onnx { };
+              edge-tts = python-final.callPackage ./pkgs/edge-tts { };
               tensorflow-addons =
                 python-final.callPackage ./pkgs/tensorflow-addons { };
               onnx-tf = python-final.callPackage ./pkgs/onnx-tf { };
@@ -40,6 +42,7 @@
               pvporcupine = python-final.callPackage ./pkgs/pvporcupine { };
               groq = python-final.callPackage ./pkgs/groq { };
               audioop-lts = python-final.callPackage ./pkgs/audioop-lts { };
+              pvrecorder = python-final.callPackage ./pkgs/pvrecorder { };
               speech-recognition =
                 python-final.callPackage ./pkgs/speech-recognition { };
               pytiled-parser =
@@ -65,6 +68,8 @@
 
         packages = pkgs.python3Packages // {
           arcade = pkgs.python3Packages.arcade;
+          funasr-onnx = pkgs.python3Packages.funasr-onnx;
+          edge-tts = pkgs.python3Packages.edge-tts;
           audiomentations = pkgs.python3Packages.audiomentations;
           openai-whisper = pkgs.python3Packages.openai-whisper;
           onnx-tf = pkgs.python3Packages.onnx-tf;
@@ -84,6 +89,7 @@
           pvporcupine = pkgs.python3Packages.pvporcupine;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
+          pvrecorder = pkgs.python3Packages.pvrecorder;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
           # pillow = pkgs.python3Packages.pillow;
           RPi.GPIO = pkgs.python3Packages.RPi.GPIO;
