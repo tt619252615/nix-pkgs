@@ -52,6 +52,7 @@
               sphinx-rtd-dark-mode =
                 python-final.callPackage ./pkgs/sphinx-rtd-dark-mode { };
               RPi.GPIO = python-final.callPackage ./pkgs/rpi { };
+              tushare = python-final.callPackage ./pkgs/tushare { };
             })
           ];
         };
@@ -91,6 +92,7 @@
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           pvrecorder = pkgs.python3Packages.pvrecorder;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
+          tushare = pkgs.python3Packages.tushare;
           # pillow = pkgs.python3Packages.pillow;
           RPi.GPIO = pkgs.python3Packages.RPi.GPIO;
         };
