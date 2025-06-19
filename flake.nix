@@ -57,7 +57,7 @@
           ];
         };
       };
-    } // inputs.utils.lib.eachSystem [ "aarch64-linux" ] (system:
+    } // inputs.utils.lib.eachSystem [ "aarch64-linux" "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
           inherit system;
@@ -92,6 +92,7 @@
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           pvrecorder = pkgs.python3Packages.pvrecorder;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
+          # ! you can use nix build .#tushare to install tushare
           tushare = pkgs.python3Packages.tushare;
           # pillow = pkgs.python3Packages.pillow;
           RPi.GPIO = pkgs.python3Packages.RPi.GPIO;
