@@ -42,6 +42,7 @@
               pocketsphinx = python-final.callPackage ./pkgs/pocketsphinx { };
               pvporcupine = python-final.callPackage ./pkgs/pvporcupine { };
               groq = python-final.callPackage ./pkgs/groq { };
+              nmslib = python-final.callPackage ./pkgs/nmslib { };
               audioop-lts = python-final.callPackage ./pkgs/audioop-lts { };
               pvrecorder = python-final.callPackage ./pkgs/pvrecorder { };
               speech-recognition =
@@ -91,6 +92,7 @@
           pvporcupine = pkgs.python3Packages.pvporcupine;
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
+          nmslib = pkgs.python3Packages.nmslib;
           pvrecorder = pkgs.python3Packages.pvrecorder;
           imsearch = pkgs.python3Packages.imsearch;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
