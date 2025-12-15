@@ -21,6 +21,7 @@
               tensorflow-addons =
                 python-final.callPackage ./pkgs/tensorflow-addons { };
               onnx-tf = python-final.callPackage ./pkgs/onnx-tf { };
+              imsearch = python-final.callPackage ./pkgs/imsearch { };
               openai-whisper =
                 python-final.callPackage ./pkgs/openai-whisper { };
               lameenc = python-final.callPackage ./pkgs/lameenc { };
@@ -91,6 +92,7 @@
           pytiled-parser = pkgs.python3Packages.pytiled-parser;
           sphinx-sitemap = pkgs.python3Packages.sphinx-sitemap;
           pvrecorder = pkgs.python3Packages.pvrecorder;
+          imsearch = pkgs.python3Packages.imsearch;
           sphinx-rtd-dark-mode = pkgs.python3Packages.sphinx-rtd-dark-mode;
           # ! you can use nix build .#tushare to install tushare
           tushare = pkgs.python3Packages.tushare;
