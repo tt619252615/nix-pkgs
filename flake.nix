@@ -9,6 +9,30 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
     {
+      # Development environment templates
+      templates = {
+        python = {
+          path = ./templates/python;
+          description = "Python development environment with fish shell theme";
+        };
+        go = {
+          path = ./templates/go;
+          description = "Go development environment with fish shell theme";
+        };
+        cpp = {
+          path = ./templates/cpp;
+          description = "C++ development environment with fish shell theme";
+        };
+        rust = {
+          path = ./templates/rust;
+          description = "Rust development environment with fish shell theme";
+        };
+        java = {
+          path = ./templates/java;
+          description = "Java development environment with fish shell theme";
+        };
+      };
+
       overlays = {
         # It is recommended that the downstream user apply overlays.default directly.
         default = final: prev: {
